@@ -16,7 +16,7 @@
   "author": "D V <dovgenik@meta.ua>",
   "license": "ISC",
   "dependencies": {
-    "esbuild": "0.25.0",
+    "esbuild": "^0.25.0",
     "simplelightbox": "^2.14.3",
     "vite": "^6.1.1",
     "vite-plugin-full-reload": "^1.2.0",
