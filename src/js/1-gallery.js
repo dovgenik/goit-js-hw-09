@@ -1,3 +1,7 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
+
 const images = [
   {
     preview:
@@ -67,9 +71,8 @@ const images = [
   function createGalleryItem(arrayImgs) {
     const fragment = document.createDocumentFragment();
     const perentUl = document.querySelector(".gallery");
-    // perentUl.innerHTML = "";
   
-    for (const element of arrayImgs) {
+      for (const element of arrayImgs) {
       const {
         preview: smallImage,
         original: largeImage,
@@ -79,10 +82,8 @@ const images = [
       //   створив li
       
     const liChaild = document.createElement("li");
-    liChaild.classList.add("gallery-item");
-    // liChaild.style.width = "360px";
+    liChaild.classList.add("gallery-item"); 
     liChaild.style.maxWidth = "360px";
-    // liChaild.style.height = "200px";
     liChaild.style.maxHeight = "200px";
     liChaild.style.overflow = "hidden";
     liChaild.style.transition = "transform 0.3s ease-in-out";
@@ -108,23 +109,12 @@ const images = [
   
   createGalleryItem(images);
 
-  document.querySelector(".gallery").addEventListener("mouseover", (event) => {
-    const item = event.target.closest(".gallery-item");
-    if (item) item.style.transform = "scale(1.1)";
-  });
-  document.querySelector(".gallery").addEventListener("mouseout", (event) => {
-    const item = event.target.closest(".gallery-item");
-    if (item) item.style.transform = "scale(1)";
-  });
   
-  import SimpleLightbox from "simplelightbox";
-  import "simplelightbox/dist/simple-lightbox.min.css";
+ 
 
   const lightbox = new SimpleLightbox('.gallery a', {
-      captions: true,
       captionsData: 'alt',
       captionDelay: 250,
-      showCounter: false,
   });
   
 
